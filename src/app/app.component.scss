@@ -1,0 +1,38 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+.principal-container {
+    display: flex;
+  
+    .bg-main {
+      flex: 0 0 30%;
+    }
+    .form{
+        flex: 0 0 70%;
+    }
+  
+    @media (min-width: 375px) and (max-width: 510px) {
+      flex-direction: column;
+  
+      .principal-container {
+        // En este rango de tamaño de pantalla, los divs interiores ocuparán el 100% del ancho
+        div{
+            flex: 0 0 100%;
+        }
+      }
+    }
+  }
+  .exp-date{
+    display: flex;
+    justify-content: space-between;
+    .month,
+    .year{
+        flex: 0 0 48%;
+        max-width: 80px;
+    }
+  }
+  input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
