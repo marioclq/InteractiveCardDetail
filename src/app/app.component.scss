@@ -1,3 +1,9 @@
+@import "../assets/styles/variables";
+label{
+font-weight: 500;   
+  text-transform: uppercase;
+  font-size: 14px;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 .principal-container {
@@ -9,30 +15,56 @@
     .form{
         flex: 0 0 70%;
     }
-  
-    @media (min-width: 375px) and (max-width: 510px) {
-      flex-direction: column;
-  
-      .principal-container {
-        // En este rango de tamaño de pantalla, los divs interiores ocuparán el 100% del ancho
-        div{
-            flex: 0 0 100%;
-        }
-      }
-    }
   }
   .exp-date{
     display: flex;
-    justify-content: space-between;
-    .month,
-    .year{
-        flex: 0 0 48%;
-        max-width: 80px;
+    // justify-content: space-between;
+    width: 100%!important;
+    flex-wrap: wrap;
+    input{
+      width: 40%!important;
     }
+    // .month,
+    // .year{
+      
+    // }
   }
   input{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+  .btn-confirm{
+    background: $very-dark-violet;
+    color: $white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .custom-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    div{
+      display: flex;
+      flex-direction: column;
+      
+    }
+  }	
+
+    
+  @media (max-width: 600px)  {
+    .principal-container {
+      flex-direction: column;
+      // div{
+      //     flex: 0 0 100%;
+      // }
+    }
+    .form{
+      padding: 16px 20px;
+    }
+
   }
